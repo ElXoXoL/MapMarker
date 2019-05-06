@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <View
+            android:id="@+id/blankView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    />
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/cs_marker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_marker_view"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp">
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/cs_top_marker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Пекарня"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/img_rate"
+                    app:layout_constraintTop_toTopOf="parent"
+            />
+
+            <ImageView
+                    android:id="@+id/img_rate"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    app:layout_constraintTop_toTopOf="@id/tv_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_name"
+                    app:layout_constraintEnd_toStartOf="@id/tv_rating"
+            />
+
+            <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="9.2"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorBlackTrans"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_name"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_name"
+            />
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGrayMid"
+                    app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/cs_main_marker_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/cs_top_marker"
+        >
+
+            <ImageView
+                    android:id="@+id/img_location"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_marker"
+                    app:layout_constraintTop_toTopOf="@id/tv_location"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_location"
+            />
+            <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Україна, Київ, вул. Вулиця 228"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorDark"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toEndOf="@id/img_location"
+                    app:layout_constraintEnd_toEndOf="parent"
+            />
+
+            <ImageView
+                    android:id="@+id/img_checkins"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_like"
+                    app:layout_constraintTop_toTopOf="@id/tv_checkins"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_checkins"
+            />
+
+            <TextView
+                    android:id="@+id/tv_checkins"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="20 чекінів"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorDark"
+                    app:layout_constraintTop_toBottomOf="@id/tv_location"
+                    app:layout_constraintStart_toEndOf="@id/img_checkins"
+            />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
